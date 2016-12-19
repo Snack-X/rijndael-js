@@ -1,0 +1,15 @@
+{
+  "name": "rijndael-js",
+  "version": "1.0.0",
+  "description": "Rijndael in Pure Javascript",
+  "main": "index.js",
+  "repository": "https://github.com/Snack-X/rijndael-js",
+  "author": "Snack <korsnack@korsnack.kr>",
+  "license": "MIT",
+  "devDependencies": {
+    "mcrypt": "^0.1.12"
+  },
+  "scripts": {
+    "test": "node test/rijndael && node test/rijndael-block"
+  }
+}
