@@ -10,7 +10,7 @@ Unlike [`js-rijndael`](https://github.com/kraynel/js-rijndael), this is licensed
 
 ## Usage
 
-```
+```js
 const Rijndael = require("rijndael-js");
 
 // Every input (key, iv, plaintext, ciphertext) will be converted to byte array
