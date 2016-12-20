@@ -33,18 +33,19 @@ let original = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 let iv = "Ut enim ad minim veniam, quis no";
 
 // Create Rijndael instance
+// `new Rijndael(key, mode)`
 let cipher = new Rijndael(key, "cbc");
 
-// `.encrypt(plaintext, blockSize, iv) -> Buffer`
+// `Rijndael.encrypt(plaintext, blockSize[, iv]) -> Buffer`
 // Output will be always <Buffer>
 let ciphertext = cipher.encrypt(original, 256, iv);
 
-ciphertext.toString("hex");
-  // bmwLDaLiI1k0oUu5wx9dlWs+Uuw3IhIkMYvq0VsVlQY66wAAqS0djh8N+SZJNHsv8wBRfhytRX2p9LJ0GT3sig==
+ciphertext.toString("base64");
+// -> bmwLDaLiI1k0oUu5wx9dlWs+Uuw3IhIkMYvq0VsVlQY66wAAqS0djh8N+SZJNHsv8wBRfhytRX2p9LJ0GT3sig==
 
-// `.decrypt(ciphertext, blockSize, iv) -> Buffer`
+// `Rijndael.decrypt(ciphertext, blockSize[, iv]) -> Buffer`
 let plaintext = cipher.decrypt(ciphertext, 256, iv);
 
 original === plaintext.toString();
-  // true
+// -> true
 ```
