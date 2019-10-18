@@ -29,7 +29,7 @@ function runTest(size, blocks, mode, ivRequired = false, keySize = 256) {
 
       // Own implementation
       const cipher = new Rijndael(key, mode);
-      const actual = cipher.encrypt(plaintext, size, iv).toString('hex');
+      const actual = Buffer.from(cipher.encrypt(plaintext, size, iv)).toString('hex');
 
       if (expected !== actual) {
         console.log  ('  Encryption Error');
@@ -53,7 +53,7 @@ function runTest(size, blocks, mode, ivRequired = false, keySize = 256) {
       const expected = known.decrypt(plaintext).toString('hex');
 
       const cipher = new Rijndael(key, mode);
-      const actual = cipher.decrypt(plaintext, size, iv).toString('hex');
+      const actual = Buffer.from(cipher.decrypt(plaintext, size, iv)).toString('hex');
 
       if (expected !== actual) {
         console.log  ('  Decryption Error');
