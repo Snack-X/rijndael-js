@@ -57,6 +57,10 @@ original === plaintext.toString();
 
 ## Changelog
 
+### v2.0.1
+
+- Added explicit `LICENSE` file for clarification
+
 ### v2.0.0
 
 - **Type of return data has changed to `Array`, from `Buffer`**
