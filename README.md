@@ -45,7 +45,7 @@ const cipher = new Rijndael(key, 'cbc');
 // Output will always be <Array> where every element is an integer <Number>
 const ciphertext = Buffer.from(cipher.encrypt(original, '256', iv));
 
-ciphertext.toString("base64");
+ciphertext.toString('base64');
 // -> bmwLDaLiI1k0oUu5wx9dlWs+Uuw3IhIkMYvq0VsVlQY66wAAqS0djh8N+SZJNHsv8wBRfhytRX2p9LJ0GT3sig==
 
 // `Rijndael.decrypt(ciphertext, blockSize[, iv]) -> <Array>`
